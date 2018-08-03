@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="12dp"
+    app:contentPadding="4dp"
+    android:background="@null"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#fff"
+        android:padding="16dp">
+
+        <TextView
+            android:text="Order No.:"
+            android:layout_marginTop="0dp"
+            android:id="@+id/order_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/order_no_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/order_no"/>
+        <TextView
+            android:layout_marginTop="0dp"
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status:"
+            android:layout_toRightOf="@+id/order_no_result"
+            android:layout_marginLeft="40dp"/>
+        <TextView
+            android:id="@+id/status_result"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/status"/>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/payment_mode"
+            android:text="Payment Mode:"
+            android:layout_below="@+id/order_no"/>
+        <TextView
+            android:id="@+id/payment_mode_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/payment_mode"/>
+        <TextView
+            android:id="@+id/total_amount"
+            android:text="Total Amount:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:layout_below="@+id/payment_mode"/>
+        <TextView
+            android:id="@+id/total_amount_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/total_amount"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/approved"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/approved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_above="@+id/total_amount"
+            android:layout_alignEnd="@+id/info_img"
+            android:layout_alignRight="@+id/info_img"
+            android:layout_marginTop="40dp"
+            android:text="Approved:" />
+        <TextView
+            android:id="@+id/approved_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/approved"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"/>
+        <ImageView
+            android:id="@+id/info_img"
+            android:background="@drawable/info"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="160dp"
+            android:layout_marginBottom="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/order_no"/>
+        <ImageView
+            android:id="@+id/downloads_img"
+            android:background="@drawable/ic_file_download_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/info_img"
+            android:layout_marginLeft="10dp"
+
+            />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
