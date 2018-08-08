@@ -11,15 +11,18 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="Get Notification "
+        android:text="Get Big Notification "
         android:textAllCaps="false" />
-    <ImageView
-        android:layout_marginTop="30dp"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/imageView"
-        android:layout_below="@+id/notify_btn"
+    <Button
+        android:id="@+id/simple_btn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notify_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Get Simple Notification"
+        android:textAllCaps="false"/>
+
 
 
 

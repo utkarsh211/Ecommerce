@@ -33,8 +33,7 @@ public class sampleNotification extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.get_notification);
         button=findViewById(R.id.notify_btn);
-        img=findViewById(R.id.imageView);
-        img.setVisibility(View.INVISIBLE);
+
         new GetImageFromURL(img).execute(URLIMAGE);
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +60,23 @@ public class sampleNotification extends AppCompatActivity {
 
             }
         });
+        Button simpleButton= findViewById(R.id.simple_btn);
+        simpleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NotificationCompat.BigTextStyle bigTextStyle=new NotificationCompat.BigTextStyle();
+                bigTextStyle.bigText("Avail 50% off on purchases of  INR 5000 or more! Offer valid only for new users! Rush to the online store NOW!!")
+                        .setBigContentTitle("LIMITED OFFER, FLAT 50% OFF!!!")
+                        .setSummaryText("P.S- Extra 10% off on HDFC debit cards");
+                NotificationCompat.Builder mbuilder= new NotificationCompat.Builder(getApplicationContext())
+                .setSmallIcon(R.drawable.user_icon)
+                        .setStyle(bigTextStyle);
+                NotificationManager notificationManager=(NotificationManager)getSystemService(NOTIFICATION_SERVICE);
+                notificationManager.notify(0,mbuilder.build());
+
+
+            }
+        });
 
     }
     public class GetImageFromURL extends AsyncTask<String,Void,Bitmap>{
@@ -83,8 +99,7 @@ public class sampleNotification extends AppCompatActivity {
         }
         @Override
         protected void onPostExecute(Bitmap bitmap){
-            super.onPostExecute(bitmap);
-            imgV.setImageBitmap(bitmap);
+
 
         }
     }
